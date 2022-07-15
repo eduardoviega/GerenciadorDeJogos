@@ -1,0 +1,26 @@
+{{#each errosNaPagina}}
+    <div class="alert alert-danger alert-dismissible">{{texto}}
+        <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>  
+{{else}}
+
+{{/each}}
+
+<h2>Cadastrar Usuário:</h2>
+<div class="card">
+    <div class="card-body">
+        <form action="/cadastrar/usuario" method="post">
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input class="form-control" type="email" name="email" required="required" placeholder="Email" maxlength="50">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Senha:</label>
+                <input class="form-control" type="password" name="senha" required="required" placeholder="Senha" maxlength="20">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <a href="/"><button type="button" class="btn btn-danger">Voltar</button></a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<style>
+    strong{font-weight:700}
+    a{text-decoration:none}
+    .alert-dismissable .close,.alert-dismissible .close{position:relative;top:-2px;right:-21px;}
+    .close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}
+    .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;}
+</style>
+
+{{#if success_msg}}
+    <div class="alert alert-success alert-dismissible">{{success_msg}}
+        <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
+{{/if}}
+
+{{#if error_msg}}
+    <div class="alert alert-danger alert-dismissible">{{error_msg}}
+        <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
+{{/if}}

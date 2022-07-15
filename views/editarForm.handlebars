@@ -1,0 +1,32 @@
+{{#each validaNaPagina}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<h2>Editando Jogo:</h2>
+<div class="card">
+    <div class="card-body">
+        <form action="/ediReq/{{idJogo}}" method="post">
+            <div class="mb-3">
+                <label class="form-label">Descrição:</label>
+                <input class="form-control" type="text" name="descricao" required="required" maxlength="50" value="{{descJogo}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Criador:</label>
+                <input class="form-control" type="text" name="criador" required="required" maxlength="40" value="{{criadorJogo}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ano:</label>
+                <input class="form-control" type="text" name="ano" required="required" value="{{anoJogo}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Idade:</label>
+                <input class="form-control" type="number" name="idade" required="required" maxlength="2" value="{{idadeJogo}}">
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="/"><button type="button" class="btn btn-danger">Voltar</button></a>
+        </form>
+    </div>
+</div>

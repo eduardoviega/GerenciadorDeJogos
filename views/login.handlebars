@@ -1,0 +1,23 @@
+{{#each validaNaPagina}}
+    <div class="alert alert-success">{{texto}}
+        <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
+{{else}}
+
+{{/each}}
+
+<h2>Login: </h2>
+<div class="card">
+    <div class="card-body">
+        <form action="/logar" method="post">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" name="email" required="required" placeholder="Email" maxlength="50">
+            <br>
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" name="senha" required="required" placeholder="Senha" maxlength="20">
+            <br>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <a href="/"><button type="button" class="btn btn-danger">Voltar</button></a>
+        </form>
+    </div>
+</div>
