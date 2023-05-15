@@ -35,9 +35,7 @@ module.exports = function(passport){
                 return done(null,false,{message:"Esta conta não existe"})
             }
             
-            const eValido = senha == user.senha
-            console.log(senha, user.senha);
-            console.log("aaaaaaaaaaa\naaaaaaaaaaa\naaaaaaaaaaa\naaaaaaaaaaa\n");
+            const eValido = await bcrypt.compare(senha, user.senha)
 
             if(!eValido) return done(null, false, {message: "Senha incorreta!"})
             
