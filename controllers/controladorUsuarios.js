@@ -40,7 +40,7 @@ usuarioControlador.inserirUsuarioBanco = async function (req, res) {
     if(erros.length > 0){//se existe algum erro
         res.render("cadastroUsuario",{errosNaPagina: erros})
     }else{
-        var pass = await cripto.hash(req.body.senha,8)
+        var pass = req.body.senha
 
         usuario.create({
             email: req.body.email,
